@@ -1,0 +1,814 @@
+body {font-family: "Malgun Gothic", "굴림", "Gulim", "Arial";}
+.container,#contact, #contact-form, .t_table {width: 80%; margin: 0 auto; overflow: hidden}
+a{text-decoration: none}
+
+ul {
+   list-style: none;
+   padding-left: 0px;
+}
+
+#faq-links {padding: 0px 20px;}
+
+#faq-links div {
+    color: #aeaeaf;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 18px 0;
+    font-size: 15px;
+
+}
+
+.faq-group {
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+
+.faq-group div {
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq-group hr {
+        border: 0;
+    border-top: 1px solid #606060;
+    clear: both;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    height: 0;
+}
+
+.faq-group:after {
+    top: 50%;
+	 left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-top-color: #393939;
+	border-width: 15px;
+   margin-left: -15px
+}
+
+.faq-accordion>li  {
+    border-bottom: 1px solid rgba(198, 198, 198, 0.4);
+    color: #666;
+    padding: 15px 0;
+}
+
+.faq-accordion li div .expand_div{
+   padding-left: 60px;
+   margin-bottom: 5px;
+}
+
+.faq-accordion li div .expand_div a {
+    font-size: 13px;
+    color: #65BC7B;
+    line-height: 1.2;
+    word-break: keep-all;
+}
+
+/* .faq-accordion > li:last-child {
+    border-bottom: 1px solid rgba(198, 198, 198, 0.4);
+} */
+
+.faq-accordion li .expanded > .detail_div_box,
+.faq-accordion li div:hover > .detail_div_box{
+   background-color: #65BC7B;
+   transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+.faq-accordion > li > div > .detail_div_box{
+   background-color: #393939;
+   align-items: center;
+   justify-content: center;
+   display: inline-flex;
+   float: left;
+   width: 23px;
+   height: 23px;
+   margin-left: 1.25em;
+   overflow-y: hidden;
+}
+
+.faq-accordion > li > div > .detail_div_box > a{
+   color: #fff;
+}
+
+.faq-accordion li div .detail_div_box .detail_a::before{
+  content:"+";
+}
+
+.faq-accordion li .expanded .detail_div_box .detail_a::before{
+  content:"\2212";
+}
+
+.faq-accordion > li > div > .expand_div > a.expanded {font-weight: 700; opacity: 1 !important}
+
+.faq-content {
+    /* background-color: #ececec; */
+    margin: 0px 0 -20px;
+}
+
+/* .faq-content p:before {
+    content: 'A.';
+    color: #ff8300;
+    float: left;
+    font-weight: 700;
+  margin-right: .5em
+} */
+
+.faq-content p {
+    font-size: smaller;
+    margin: 0 1.2em;
+    padding: 1.250em 0;
+    word-break: keep-all;
+}
+
+.expand_div p {
+   float: right;
+   font-size: smaller;
+   margin-right: .5em
+}
+
+.faq-hide, .category_hide {display: none}
+
+.faq-selected {
+    color: #49494b!important;
+   -webkit-transition: all 1s ease;
+         transition: all 1s ease;
+}
+
+/* important css */
+.important_form {
+   background: #E5E6E7;
+}
+.important_form .expand_div a:before{
+   /* content: '[important]'; */
+   color: #ff8300;
+   float: left;
+   font-weight: 700;
+   margin-right: .5em
+}
+
+.faq-accordion .important_form div .expand_div a {
+   color: #ff8300;
+    line-height: 1.4;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.faq-accordion .important_form .expanded > .detail_div_box,
+.faq-accordion .important_form div:hover > .detail_div_box{
+   background-color: #ff8300;
+   transition-property: background-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+/* for mobile */
+@media screen and (max-width: 500px){
+    #contact-form,.t_table {width: 90%; margin: 0 auto; overflow: hidden}
+    .container{width: 100%; margin: 0 auto; overflow: hidden}
+    #contact {width: 100%; margin: 0 auto; overflow: hidden}
+}
+ 
+ /* Contact Form Styles */
+ #contact-form div h1 {
+    margin: 10px 0 0 0;
+ }
+ #contact-form {
+    background-color:rgba(236,236,236,0.9);
+    padding: 20px;
+    border-radius:7px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+ }
+ #contact-form input,   
+ #contact-form select,   
+ #contact-form textarea,   
+ #contact-form label { 
+    font-size: 15px;  
+    margin-bottom: 2px;
+ } 
+ #contact-form input,   
+ #contact-form select,   
+ #contact-form textarea { 
+    background: #fff;
+    border: 0; 
+    -moz-border-radius: 4px;  
+    -webkit-border-radius: 4px;  
+    border-radius: 4px;
+    margin-bottom: 25px;  
+    padding: 5px;  
+ }  
+ #contact-form input:focus,   
+ #contact-form select:focus,   
+ #contact-form textarea:focus {  
+    background-color: #E5E6E7; 
+ }  
+ #contact-form textarea {
+    width:100%;
+    height: 250px;
+ }
+ #contact-form button[type="submit"] {
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background:#991D57;
+    background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+ }
+ #contact-form button[type="submit"]:disabled {
+    cursor: no-drop;
+ }
+ #contact-form button[type="submit"]:hover:not([disabled]) {
+    background-image:linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+    background-image:-moz-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+    background-image:-webkit-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+ }
+ #contact-form button[type="submit"]:active {
+    box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+ }
+ input:required, textarea:required {  
+    box-shadow: none;
+    -moz-box-shadow: none;  
+    -webkit-box-shadow: none;  
+    -o-box-shadow: none;  
+ } 
+ #contact-form .required {  
+    font-weight:bold;  
+    color: #696969;      
+ }
+
+ /*/////////////////////////////////////////////////////////////*/
+ /* GENERAL BUTTON STYLING */
+ 
+ .main_page div button {
+   width: 12em;
+   background: none;
+   border: 2px solid rgb(59, 59, 59);
+   border-radius: 5px;
+   color: rgb(59, 59, 59);
+   display: block;
+   font-size: 1.2em;
+   font-weight: bold;
+   margin: 0px auto;
+   padding: 0.5em 0em;
+   position: relative;
+   text-transform: uppercase;
+ }
+
+ .selection {
+   width: 12em;
+   background: none;
+   color: rgb(59, 59, 59);
+   display: block;
+   font-size: 1em;
+   font-weight: bold;
+   margin: 1em auto;
+   text-align: center;
+ }
+ .main_page div{
+    padding: 2rem;
+    border-bottom: 2px solid rgb(110, 110, 110);
+    margin: 0px auto;
+    width: fit-content;
+ }
+
+ .main_page div button:hover {
+   background: #b4b4b4;
+   cursor: pointer;
+ }
+ /*/////////////////////////////////////////////////////////////*/
+ @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans);
+
+ 
+ .card {
+   background-color: #f4f4f4;
+   width: 300px;
+   margin: 10px auto;
+   box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
+ }
+ 
+ .card-header {
+   overflow: hidden;
+   width: 100%;
+   max-height: 200px;
+ }
+ 
+ .card-header img{
+   width: 100%;
+ }
+ 
+ .card-content {
+   width: 85%;
+   margin: 35px auto;
+ }
+ 
+ .card-content h3 {
+   font-size: 25px;
+   margin-bottom: 0;
+   color: #303F9F;
+ }
+ 
+ .card-content h4 {
+   font-size: 14px;
+   margin-top: 0;
+   color: #FF5252;
+ }
+ 
+ .card-content p {
+   color: #727272;
+   font-size: 12px;
+   
+ }
+ 
+ .card-footer {
+   padding: 5px;
+ }
+ 
+ .card-footer ul {
+   padding: 0;
+   width: 90%;
+   margin: auto;
+   text-align: center;
+ }
+ 
+ .card-footer ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 5px;
+ }
+ 
+ .card-footer ul li i {
+   font-size: 2em;
+   color: #3F51B5;
+ }
+
+ /*input (type number) split button 제거 css*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ /*table css*/
+@import "compass/css3";
+ .t_table {
+	 margin: 25px auto;
+	 border-collapse: collapse;
+	 border: 1px solid #eee;
+	 border-bottom: 2px solid #999;
+}
+ .t_table tr:hover {
+	 background: #f4f4f4;
+}
+ .t_table tr:hover td {
+	 color: #555;
+}
+.t_table tr .table_click_style:hover {
+   cursor: pointer;
+   color: #FF5252;
+}
+ .t_table th, table td {
+	 color: #999;
+	 border: 1px solid #eee;
+	 padding: 0.5rem 1rem;
+	 border-collapse: collapse;
+    text-align: center;
+}
+ .t_table th {
+	 background: #999;
+	 color: #fff;
+	 text-transform: uppercase;
+	 font-size: 12px;
+}
+ .t_table th.last {
+	 border-right: none;
+}
+
+ .custom_btn{
+    width: 10rem;
+    background-color: #fff;
+    border: 1px solid #999;
+    color: #999;
+    padding: 0.3rem;
+    float: right;
+    margin: 0.5rem;
+ }
+ .custom_btn:hover{
+   background-color: #f4f4f4;
+   border: 1px solid #555;
+   color: #555;
+   /* font-weight: bold; */
+}
+
+   /* no contents */
+.no_contents{
+   background: #fff;
+   border-radius: 2px;
+   display: inline-block;
+   margin: 1rem;
+   position: relative;
+   min-width: -webkit-fill-available;
+   border: 1px solid #999;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.no_contents p{
+   text-align: center;
+   color: #555;
+}
+
+/* chat box */
+.chat_info_div{
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 38px;
+  padding: 0px 8px;
+}
+.chat_info_div .chat_btn{
+  position: relative;
+  margin-top: 8px;
+  /* width: 100%;
+  height: 60px; */
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 15%) 0px 4px 16px, rgb(255 255 255 / 15%) 0px 0px 2px inset;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.chat_info_div .chat_btn p{
+  text-align: center;
+  color: #555;
+}
+.chat_info_div .chat_btn .Inquiry{
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+}
+.chat_info_div .chat_btn .img{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: url(https://shipney.biz/img/messenger.png);
+  transition: transform 0.1s ease-out 0s;
+}
+
+/*custom_chat_form*/
+.support_div{
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 38px;
+  padding: 0px 8px;
+  font-size: 14px;
+}
+.support_div h4{
+  font-weight: 600;
+}
+.support_div_div .support_block{
+  position: relative;
+  margin: 8px 0px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+.support_div_div{
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 15%) 0px 4px 16px, rgb(255 255 255 / 15%) 0px 0px 2px inset;
+  border-radius: 10px;
+  padding: 3px 15px;
+}
+.support_div_div .common{
+  text-align: inherit;
+  color: #555;
+  font-weight: 800;
+  margin: 5px 0px 5px 35px;
+}
+.support_div_div .common .grid_container{
+  display: grid;
+  grid-template-columns: 100% 100%;
+}
+.support_div_div .common a{
+  text-decoration: underline;
+  color: #555;
+}
+.support_div_div .support_block .img_email{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: none;
+  transition: transform 0.1s ease-out 0s;
+  background-image: url(https://shipney.biz/img/email.png);
+}
+.support_block .common .running_date{
+  color: #888;
+  font-weight: 400;
+}
+.support_block .common .running_time{
+  display: block;
+}
+.support_div_div .support_block .img_time{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: none;
+  transition: transform 0.1s ease-out 0s;
+  background-image: url(https://shipney.biz/img/time.png);
+}
+.support_div_div .support_block .img_live-chat{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: none;
+  transition: transform 0.1s ease-out 0s;
+  background-image: url(https://shipney.biz/img/chat.png);
+}
+
+.support_div .support_div_div .chat_btn{
+  cursor: pointer;
+}
+
+.support_div .support_div_div .support_block .end{
+  color: #b4b4b4;
+}
+
+.email_btn{
+  position: relative;
+  margin-top: 8px;
+  /* width: 100%;
+  height: 60px; */
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 15%) 0px 4px 16px, rgb(255 255 255 / 15%) 0px 0px 2px inset;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.email_btn p{
+  text-align: center;
+  color: #555;
+}
+.email_btn .Inquiry{
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+}
+.email_btn .img{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: url(https://shipney.biz/img/email.png);
+  transition: transform 0.1s ease-out 0s;
+}
+
+.welcome_chat_info{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-bottom: 0px;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 2px 1px, rgb(0 0 0 / 15%) 0px 4px 16px, rgb(255 255 255 / 15%) 0px 0px 2px inset;
+}
+
+.welcome_chat_info .chat_div{
+  display: flex;
+  margin-top: 6px;
+  transition: background-color 0.2s ease 0s;
+}
+
+.welcome_chat_info .profile{
+  width: 62px;
+  padding: 13px 0px 0px 16px;
+}
+
+.welcome_chat_info .profile .avatar{ 
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-image: url(https://shipney.biz/img/avatar_default.png);
+  background-size: cover;
+  background-position: center center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: none;
+}
+
+.welcome_chat_info .chat_div .welcome_msg .profile_txt{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.welcome_chat_info .chat_div .welcome_msg{
+  -webkit-box-flex: 1;
+  flex: 1 1 0px;
+  min-width: 180px;
+  padding: 12px 8px 12px 0px;
+  font-size: 13px;
+  color: rgb(36, 36, 40);
+}
+
+.welcome_chat_info .chat_div .welcome_msg .welcome_des{
+  text-overflow: ellipsis;
+  margin-top: 4px;
+  padding-right: 42px;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  line-height: 18px;
+  max-height: 144px;
+}
+
+.welcome_chat_info .chat_div .welcome_msg .welcome_des .emoji{
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  vertical-align: -4px !important;
+  margin: 0px 1px !important;
+}
+
+.welcome_des a {
+  color: rgb(0, 166, 255);
+  text-decoration: none;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea,
+#contact button[type="submit"] {
+  font-size: 12px/16px;
+  font-weight: 400;
+}
+
+#contact h3 {
+  display: block;
+  font-size: 23px;
+  font-weight: bold;
+  color: #273a4f;
+  margin-bottom: 10px;
+  text-align: -webkit-center;
+}
+
+#contact h4 {
+  margin: 15px 0 15px;
+  display: block;
+  color: #555;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+fieldset {
+   border: medium none !important;
+   margin: 0 0 10px;
+   min-width: initial;
+   padding: 0;
+   width: 100%;
+   position: relative;
+   display: flex;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact textarea {
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fcfcfc;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid rgba(165,168,172,.75);
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  font-weight: bold;
+  width: 40%;
+  border: none;
+  background: #ef524a;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #D43832;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid rgba(165,168,172,.75);
+}
+
+::-webkit-input-placeholder {
+  color: rgba(165,168,172,.5);
+}
+
+:-moz-placeholder {
+  color: rgba(165,168,172,.5);
+}
+
+::-moz-placeholder {
+  color: rgba(165,168,172,.5);
+}
+
+:-ms-input-placeholder {
+  color: rgba(165,168,172,.5);
+}
+
+hr.style-eight {
+   overflow: visible; /* For IE */
+   padding: 0;
+   border: none;
+   margin-top: 1em;
+   border-top: 3px solid #cccccc;
+   width: 65%;
+   color: #cccccc;
+   text-align: center;
+}
+hr.style-eight:after {
+   content: "★";
+   display: inline-block;
+   position: relative;
+   top: -0.9em;
+   font-size: 1em;
+   padding: 0 0.25em;
+   background: white;
+}

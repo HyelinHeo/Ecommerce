@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 메인 화면 */
+header{width:100%; background:#6ebca2; height: 60px; text-align: center; font-size: 24px; line-height: 60px; color: #fff; font-weight: bold;}
+.wrap{width:90%; padding:2% 5%; }
+
+.address{}
+.ic_map_point{float: left; min-width:70px; text-align: center; height: 80px; padding-top:25px;}
+.ic_map_point img {height:30px;}
+.detail li{font-size: 14px; color:#333333;}
+hr{clear:both; margin:20px 0;}
+.ic_history{float: left; min-width:70px; text-align: center;}
+.ic_history img{height:20px;}
+.history{margin-top:1px;}
+.history .title{font-weight: bold; font-size: 16px;}
+.history .title.on{color: #333;}
+.history .title.off{color: #999;}
+.history .history_detail{margin-top:3px; margin-left:35px; border-left:2px solid #ccc; height: 70px;}
+.history .history_detail li{margin-left:40px; color:#999;}
+.history .history_detail.last{border:none;}
+
+
+
+
+
+
+
+
+
